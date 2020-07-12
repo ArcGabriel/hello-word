@@ -4,18 +4,25 @@ import './App.css';
 import { render } from '@testing-library/react';
 
 class App extends Component{
+  state = {
+    miau: 'Bienvenido a miau'
+  }
+  cambiarTextoDelEstado = () => {
+    this.setState({ miau: 'Hola mundo' });
+  }
   manejaClick = texto => {
     alert(texto)
   }
   render(){
-    const miau = 'Bienvenido miau'
+    const { miau } = this.state
+    const texto = 'Bienvenido miau'
     const guau = 'Bienvenido guau'
     return (
       <div className="App">
         <Cabecera miau={miau} manejaClick={this.manejaClick} />
         <Cabecera miau={guau} manejaClick={this.manejaClick} />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <p onClick={this.cambiarTextoDelEstado} className="App-intro">
+          {miau}
         </p>
         <a
           className="App-link"
