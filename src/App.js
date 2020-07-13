@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Cabecera from './components/Cabecera';
+import P from './components/P';
 import './App.css';
 import { render } from '@testing-library/react';
 
@@ -7,23 +8,21 @@ class App extends Component{
   state = {
     miau: 'Bienvenido a miau'
   }
+
   cambiarTextoDelEstado = () => {
     this.setState({ miau: 'Hola mundo' });
   }
   manejaClick = texto => {
     alert(texto)
   }
-  render(){
+  render() {
     const { miau } = this.state
-    const texto = 'Bienvenido miau'
-    const guau = 'Bienvenido guau'
     return (
       <div className="App">
         <Cabecera miau={miau} manejaClick={this.manejaClick} />
-        <Cabecera miau={guau} manejaClick={this.manejaClick} />
-        <p onClick={this.cambiarTextoDelEstado} className="App-intro">
+        <P>
           {miau}
-        </p>
+        </P>
         <a
           className="App-link"
           href="https://reactjs.org"
