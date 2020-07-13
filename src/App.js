@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Cabecera from './components/Cabecera';
 import P from './components/P';
+import Pextend from './components/Pextend';
 import './App.css';
-import { render } from '@testing-library/react';
+
 
 class App extends Component{
   state = {
@@ -23,6 +24,9 @@ class App extends Component{
         <P>
           {miau}
         </P>
+        <Pextend onClick={this.cambiarTextoDelEstado}>
+          {miau}
+        </Pextend>
         <a
           className="App-link"
           href="https://reactjs.org"
