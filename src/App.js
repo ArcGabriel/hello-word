@@ -22,7 +22,7 @@ class App extends Component{
     const { miau } = this.state
     return (
       <div className="App">
-        <Cabecera miau={miau} manejaClick={this.manejaClick} />
+        {/* <Cabecera miau={miau} manejaClick={this.manejaClick} /> */}
         {/* <CabeceraCsSinline miau={miau} manejaClick={this.manejaClick} /> */}
         <CabeceraCssInlineDim miau={miau} manejaClick={this.manejaClick} />
         <P>

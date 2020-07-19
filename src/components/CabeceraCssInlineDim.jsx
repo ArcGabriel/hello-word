@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import H1 from './H1';
 
 const styles = {
     header: ({ backgroundColor }) => ({
@@ -10,7 +11,6 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: 'calc(10px + 2vmin)',
         color: 'white',
     })
 }
@@ -36,7 +36,7 @@ export default class CabeceraCssInlineDim extends Component {
         return(
             <header onClick={this.cambiaColorHeader} style={styles.header({ backgroundColor })}>
                 <img onClick={this.manejaClick} src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">{miau}</h1>
+                <H1>{miau}</H1>
             </header>
         );
     }
