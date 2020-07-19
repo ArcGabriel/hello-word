@@ -1,44 +1,11 @@
 import React, { Component } from 'react';
-import Cabecera from './components/Cabecera';
-import CabeceraCsSinline from './components/CabeceraCsSinline';
-import CabeceraCssInlineDim from './components/CabeceraCssInlineDim';
-import P from './components/P';
-import Pextend from './components/Pextend';
-import './App.css';
-
+import FormularioSimple from './components/FormularioSimple'
 
 class App extends Component{
-  state = {
-    miau: 'Bienvenido a miau'
-  }
-
-  cambiarTextoDelEstado = () => {
-    this.setState({ miau: 'Hola mundo' });
-  }
-  manejaClick = texto => {
-    alert(texto)
-  }
   render() {
-    const { miau } = this.state
     return (
-      <div className="App">
-        {/* <Cabecera miau={miau} manejaClick={this.manejaClick} /> */}
-        {/* <CabeceraCsSinline miau={miau} manejaClick={this.manejaClick} /> */}
-        <CabeceraCssInlineDim miau={miau} manejaClick={this.manejaClick} />
-        <P>
-          {miau}
-        </P>
-        <Pextend onClick={this.cambiarTextoDelEstado}>
-          {miau}
-        </Pextend>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn_React
-        </a>
+      <div>
+        <FormularioSimple />
       </div>
     )
   }
