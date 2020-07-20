@@ -29,6 +29,7 @@ export default class FormularioSimple extends Component {
         if (!Object.keys(result).length) {
             // enviar el formulario
             console.log('formulario valido')
+            e.target.reset()
         }
     }
  
